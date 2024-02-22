@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bye Bye 2023 | Welcome 2024</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+        body{
+            width: 100%;
+           display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            background: url(https://media3.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif?cid=ecf05e47ej44z2me1altgwxl4hldy16tf42085mzh2wy53zg&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-clip: content-box;
+        }
+        .main{
+            position: absolute;
+            cursor: pointer;
+           }
+           .main::before{
+            content: 'Bye Bye';
+            font-weight: bolder;
+            color: rgb(1, 136, 255);
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 40px;
+            top: -10%;
+            transition: 1s;
+           }
+           .main:hover::before{
+            transform: translateY(-100px);
+            opacity: 0;
+            filter: blur(30px);
+           }
+           .main::after{
+            content: 'Happy New Year';
+            color: red;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 40px;
+            left: 0;
+            top: -10%;
+            transition: 1s;
+            transform: translateY(-100px);
+            opacity: 0;
+            filter: blur(30px);
+            font-weight: bolder;
+           }
+           .main:hover::after{
+            transform: translateY(0px);
+            opacity: 1;
+            filter: blur(0px);
+           }
+            .main span{
+                display: inline-block;
+                color: aliceblue;
+                font-size: 200px;
+                font-weight: bold;
+                transition: 2s;
+                filter: blur(0px);
+            }
+
+            .main span:last-child{
+                color: blue;
+            }
+
+            .main:hover span:last-child{
+                transform: rotate(45deg)translateY(-200px);
+                opacity: 0;
+                filter: blur(30px);
+            }
+            .main span:nth-child(3)::after{
+                content: '4';
+                position: absolute;
+                color: red;
+                transform: rotate(-45deg)translateY(200px);
+                opacity: 0;
+                filter: blur(30px);
+                transition: 2s;
+            }
+            .main:hover span:nth-child(3)::after{
+              
+                transform: rotate(0deg)translateY(0px);
+                opacity: 1;
+                filter: blur(0px);
+            }
+    </style>
+</head>
+<body>
+    <div class="main">
+        
+        <span>2</span>
+        <span>0</span>
+        <span>2</span>
+        <span>3</span>
+    
+    </div>
+</body>
+</html>

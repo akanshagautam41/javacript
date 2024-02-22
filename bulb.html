@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide & show password </title>
+    <style>
+
+        .password{
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border: 5px solid black;
+            padding: 10px;
+            margin: 15% auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 15px 15px 15px black;
+        }
+
+        .bg{
+            height: 250px;
+            width: 250px;
+            position: absolute;
+            left: -20%;
+            top: -20%;
+            border-radius: 100%;
+            z-index: -1;
+            background: linear-gradient(to right bottom,#efefef,purple);
+        }
+       
+        #sw{
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <!-- off
+    https://freepngimg.com/thumb/bulb/1-bulb-png-image.png -->
+    <!-- on
+    https://freepngimg.com/thumb/bulb/5-yellow-light-bulb-png-image.png -->
+    <div class="password">
+            <img src=" https://freepngimg.com/thumb/bulb/1-bulb-png-image.png" alt="" id="pass-icon">
+            <div class="bg"></div>
+            <!-- <button onclick="myFunction()"> on / off </button> -->
+            <img src="https://cdn.pixabay.com/photo/2012/04/11/18/29/button-29286_1280.png" alt="" id="sw" onclick="myFunction()">
+    </div>
+    <script>
+        var icon = 1;
+        function myFunction(){
+            if(icon == 1){
+                document.getElementById("pass-icon").src=' https://freepngimg.com/thumb/bulb/1-bulb-png-image.png';
+                document.getElementById("sw").src='https://cdn.pixabay.com/photo/2012/04/11/18/29/button-29286_1280.png';
+                icon = 0;
+            }else{
+                document.getElementById("pass-icon").src='https://freepngimg.com/thumb/bulb/5-yellow-light-bulb-png-image.png';
+                document.getElementById("sw").src='https://www.freeiconspng.com/thumbs/turn-off-icon-png/red-turn-off-png-0.png';
+                icon = 1;
+            }
+        }
+    </script>
+</body>
+</html>

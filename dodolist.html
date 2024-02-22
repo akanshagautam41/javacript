@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mn{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .mn .lf{
+            width: 48%;
+        }
+        .mn .lf img{
+            width: 100%;
+            height: inherit;
+        }
+        .mn .rt{
+            width: 48%;
+        }
+    </style>
+</head>
+<body>
+    
+ <button onclick="add()">read more</button>
+ <div class="list">
+
+ </div>
+
+
+
+
+ <script>
+
+    var text = document.querySelector(".list")
+
+    // function add(){
+
+        var nw = document.createElement("div");
+
+        nw.innerHTML = `
+        
+        <div class="mn">
+    <div class="lf">
+        <img src="https://images.hdqwalls.com/wallpapers/madame-web-movie-2024-z5.jpg" alt="lf img">
+    </div>
+    <div class="rt">
+        <h2>heading</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate accusamus minus similique quam libero fuga quos harum corporis quas, molestiae odio blanditiis? Nulla temporibus laborum necessitatibus magni assumenda omnis accusamus, molestias, magnam optio debitis nesciunt?
+        </p>
+        <a href="#">read more</a>
+    </div>
+ </div>
+
+        `;
+        text.appendChild(nw)
+
+    // }
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container{
+        width: 30%;
+        height: 20vh;
+        background: linear-gradient(left to right,skyblue,coral);
+        margin: 15% ;
+        border: 2px;
+      }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="box">
+        <input  type="text" id="inp" placeholder="Enter Todo">
+        <button onclick="add()">Add</button>
+      </div>
+<div class="data" onclick="edit()" ></div>
+
+</div>
+
+<script>
+
+var inputs = document.getElementById("inp");
+var text = document.querySelector(".data");
+
+function add(){
+  if(inputs.value ==""){
+    alert("enter value");
+  }else{
+    var nw = document.createElement("p")
+    nw.innerHTML = `${inputs.value}<i class="fa-solid fa-trash"></i> <i class="fa-solid fa-pen"></i>`
+    text.appendChild(nw);
+    inputs.value = "";
+    nw.querySelector("i").addEventListener("click",function(){
+      nw.remove();
+      
+    })
+  }
+}
+
+function edit(){
+  
+}
+
+
+</script>
+</body>
+</html>

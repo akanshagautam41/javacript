@@ -1,0 +1,1040 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+section{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Logo And Menu  Css start */
+.main{
+    width: 100%;
+    height: inherit;
+   display: flex;
+align-items: center;
+
+}
+
+.main .logo{
+    width: 10%;
+    height: inherit;
+padding-left: 20px;
+}
+.main .logo img{
+    width: 100%;
+}
+.main .menu{
+    width: 100%;
+    height: inherit;
+    padding-left: 20px;
+}
+.main .menu a{
+    width: 90%;
+   padding-right: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media screen and (max-width:760px) {
+    .main .logo{
+        width: 48%;
+        height: inherit;
+        margin: 10px 0;
+        padding: 10px;
+    
+}}
+
+@media screen and (max-width:511px) {
+    .main .logo{
+        width: 90%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .main .menu{
+        width: 48%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 511px) {
+    .main .menu{
+        width: 90%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+}
+
+/* Logo And Menu  Css end */
+
+/* banner  Css start */
+
+.banner{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.banner img{
+    width: 100%;
+    transition: all .5s linear;
+    transform: scale(1);
+    height: inherit;
+}
+
+.banner:hover img{
+    transform: scale(1.1);
+    
+}
+
+@media screen and (max-width:760) {
+    .banner{
+        width: 50%;
+    }
+}
+@media screen and (max-width:511px) {
+    .banner{
+        width: 100%;
+    }
+}
+/* banner  Css end */
+/* product  Css start*/
+.box{
+    width: 100%;
+    height: inherit;
+    flex-wrap: wrap;
+    display: flex;
+  justify-content: space-between;
+ padding-top: 30px;
+ 
+ 
+}
+
+.box .bx{
+    width: 24%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.box  .bx img{
+    width: 100%;
+    transform: scale(1);
+    transition: all 2s linear;
+   
+}
+
+.box .bx  p{
+    text-align: center;
+   text-decoration: none;
+    font-size: 20px;
+    color: rgb(239, 0, 0);
+    position: absolute;
+    bottom: 50px;
+            left: 20px;
+            right: 0;
+            margin: 0 auto;
+            font-weight: 300;
+}
+
+.box .bx span{
+    text-align: center;
+    text-decoration: none;
+     font-size: 18px;
+     color: rgb(249, 15, 15);
+     position: absolute;
+     bottom: 18px;
+             left: 0;
+             right: 0;
+             margin: 0 auto; 
+             font-weight: 900;
+}
+
+.box .bx:hover img{
+    transform: scale(1.1);
+    
+}
+
+
+@media screen and (max-width : 760px){
+    .box .bx{
+        width: 48%;
+     padding-top: 20px;
+     text-align: center;
+     
+    }
+   
+}
+
+@media screen and (max-width : 511px){
+    .box .bx{
+        width: 90%;
+     padding: 20px;
+     text-align: center;
+     margin: 25px 0;
+    }
+}
+
+@media screen and (max-width : 760px){
+    .box .bx p{
+     
+     text-align: center;
+     color: rgb(89, 6, 243);
+     font-size: 21px;
+     font-weight: 300;
+    }
+   
+}
+
+@media screen and (max-width : 511px){
+    .box .bx p{
+       
+     padding-left: 20px;
+     text-align: center;
+     color: black;
+     position: static;
+     text-decoration: none;
+    }
+}
+
+@media screen and (max-width : 760px){
+    .box .bx span{
+       font-size: 18px; 
+      text-align: center;
+     color: rgb(80, 8, 247);
+     
+     
+    }
+   
+}
+
+@media screen and (max-width : 511px){
+    .box .bx span{
+       padding-left: 20px;
+     text-align: center;
+     color: black;
+     position: static;
+     text-decoration: none;
+    }
+}
+
+/* product  Css end*/
+
+/* feature ads  Css start*/
+
+.main_ad{
+    width: 100%;
+    background-color: grey;
+            }
+    
+            .feature{
+                width: 100%;
+                height: inherit;
+    
+            }
+    .feature .text h2{
+    font-size: 40px;
+    padding-top: 30px;
+    padding-left: 70px;
+    font-weight: 500;
+    }
+    
+    .feature .ad{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    
+    }
+    .ad .ad1{
+        width: 49%;
+        height: inherit;
+       padding-left: 20px;
+       overflow: hidden;
+       
+       
+    }
+  
+    
+    
+    .ad .ad1 img{
+        width: 100%;
+        height: inherit;
+        
+        transform: scale(1);
+        transition: all .2s linear;
+        
+    }
+    .ad .ad1:hover img{
+        transform: scale(1.1);
+    }
+    
+    .ad .ad2{
+        width: 48%;
+        height: inherit;
+        overflow: hidden;
+    
+    }
+    
+    .ad .ad2 video{
+        width: 100%;
+        height: inherit;
+        padding-bottom: 20px;
+        transform: scale(1);
+        transition: all .2s linear;
+    }
+
+    .ad .ad2:hover video{
+        transform: scale(1.1);
+    }
+    
+    @media screen and (max-width : 760px) {
+        .ad .ad1{
+            width: 48%;
+        }
+    }
+    
+    @media screen and (max-width : 511px) {
+        .ad .ad1{
+            width: 90%;
+            
+            
+        }
+    }
+    
+    
+    @media screen and (max-width : 760px) {
+        .ad .ad2{
+            width: 48%;
+        }
+    }
+    
+    @media screen and (max-width : 511px) {
+        .ad .ad2{
+            width: 90%;
+            
+            
+        }
+    }
+
+    .ad .ad1 p{
+        font-size: 30px;
+        padding-left: 20px;
+padding-top: 30px;
+    }
+
+    .ad .ad2 span{
+        font-size: 25px;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        padding: 30px;
+        
+    }
+
+    .ad .ad2 p{
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+        font-weight: 100;
+        padding: 20px;
+        
+    }
+    
+    @media screen and (max-width : 760px){
+        .ad .ad1 p{
+           font-size: 18px; 
+           padding: 10px;
+         }
+       
+    }
+    
+    @media screen and (max-width : 511px){
+        .ad .ad1 p{
+            font-size: 20px; 
+            padding: 20px;
+           
+         }
+    }
+
+    @media screen and (max-width : 760px){
+        .ad .ad2 p a{
+           font-size: 15px; 
+          
+        }
+       
+    }
+    
+    @media screen and (max-width : 511px){
+        .ad .ad2 p a{
+          color: black;
+         text-decoration: none;
+         font-size: 15px; 
+           
+        }
+    }
+    @media screen and (max-width : 760px){
+        .ad .ad2 a{
+           font-size: 15px; 
+          
+        }
+       
+    }
+    
+    @media screen and (max-width : 511px){
+        .ad .ad2  a{
+          color: black;
+         text-decoration: none;
+         font-size: 15px; 
+          
+        }
+    }
+
+    /* Explore Disney Holidays */
+
+    .explore{
+        width: 100%;
+        height: inherit;
+    }
+
+    .explore .ex_text h2{
+        padding-left: 40px;
+        padding-top: 30px;
+        font-size: 40px;
+        font-weight: 300;
+        padding-bottom: 20px;
+    }
+@media screen and (max-width:760px){
+    .explore .ex_text h2{
+        font-size: 25px;
+        font-weight: 100;
+        
+    }
+}
+
+@media screen and (max-width:511px){
+    .explore .ex_text h2{
+        font-size: 25px;
+        font-weight: 100;
+        
+    }
+}
+    .explore .product{
+        width: 100%;
+        height: inherit;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .product .pr1{
+        width: 30%;
+        height: inherit;
+        
+    }
+    
+    .product .pr1 img{
+        width: 100%;
+        height: inherit;
+    }
+    .product .pr1 p{
+        text-align: center;
+        text-decoration: none;
+         font-size: 25px;
+         padding-top: 25px;
+         padding-bottom: 10px;
+         color: black;
+         font-weight: 100;
+    }
+
+    .product .pr1 h4{
+        text-align: center;
+        text-decoration: none;
+         font-size: 18px;
+         color: black;
+    }
+    
+    @media screen and (max-width : 760px){
+        .product .pr1{
+           width: 48%;
+          
+        }
+       
+    }
+    
+    @media screen and (max-width : 511px){
+        .product .pr1{
+         width: 90%;
+          
+        }
+    }
+
+    @media screen and (max-width : 760px){
+        .product .pr1 p{
+           font-size: 20px;
+          
+        }
+       
+    }
+    @media screen and (max-width : 511px){
+        .product .pr1 p{
+           font-size: 20px;
+          
+        }
+       
+    }
+
+    @media screen and (max-width : 760px){
+        .product .pr1 h4{
+           font-size: 20px;
+          
+        }
+       
+    }
+    @media screen and (max-width : 511px){
+        .product .pr1 h4{
+           font-size: 15px;
+          padding-bottom: 30px;
+          
+        }
+       
+    }
+    .product .pr2{
+        width: 30%;
+        height: inherit;
+    }
+
+    .product .pr2 img{
+        width: 100%;
+        height: inherit;
+    }
+
+    .product .pr2 p{
+        text-align: center;
+        text-decoration: none;
+         font-size: 25px;
+         padding-top: 25px;
+         padding-bottom: 10px;
+         color: black;
+         font-weight: 100;
+    }
+
+    .product .pr2 h4{
+        text-align: center;
+        text-decoration: none;
+         font-size: 18px;
+         color: black;
+    }
+
+    @media screen and (max-width : 760px){
+        .product .pr2{
+           width: 48%;
+          
+        }
+       
+    }
+    
+    @media screen and (max-width : 511px){
+        .product .pr2{
+         width: 90%;
+          
+        }
+    }
+
+    @media screen and (max-width : 760px){
+        .product .pr2 p{
+           font-size: 20px;
+          
+        }
+       
+    }
+    @media screen and (max-width : 511px){
+        .product .pr2 p{
+           font-size: 20px;
+          
+        }
+       
+    }
+
+    @media screen and (max-width : 760px){
+        .product .pr2 h4{
+           font-size: 20px;
+          
+        }
+       
+    }
+    @media screen and (max-width : 511px){
+        .product .pr2 h4{
+           font-size: 15px;
+          padding-bottom: 30px;
+          
+        }
+       
+    }
+    .product .pr3{
+        width: 30%;
+        height: inherit;
+    }
+    .product .pr3 img{
+        width: 100%;
+        height: inherit;
+    }
+
+    .product .pr3 p{
+        text-align: center;
+        text-decoration: none;
+         font-size: 25px;
+         padding-top: 25px;
+         padding-bottom: 10px;
+         color: black;
+         font-weight: 100;
+    }
+
+    .product .pr3 h4{
+        text-align: center;
+        text-decoration: none;
+         font-size: 18px;
+         color: black;
+    }
+
+    @media screen and (max-width : 760px){
+        .product .pr3{
+           width: 48%;
+          
+        }
+       
+    }
+    
+    @media screen and (max-width : 511px){
+        .product .pr3{
+         width: 90%;
+          
+        }
+    }
+
+    @media screen and (max-width : 760px){
+        .product .pr3 p{
+           font-size: 20px;
+          
+        }
+       
+    }
+    @media screen and (max-width : 511px){
+        .product .pr3 p{
+           font-size: 20px;
+          
+        }
+       
+    }
+
+    @media screen and (max-width : 760px){
+        .product .pr3 h4{
+           font-size: 20px;
+          
+        }
+       
+    }
+    @media screen and (max-width : 511px){
+        .product .pr3 h4{
+           font-size: 15px;
+          padding-bottom: 30px;
+          
+        }
+       
+    }
+
+    /* Explore Disney Holidays css ends */
+
+    /* More From Disney css start */
+
+    .more_disney{
+        width: 100%;
+        height: inherit;
+    }
+
+    .more_disney .dt h2{
+        padding-left: 40px;
+        padding-top: 30px;
+        font-size: 40px;
+        font-weight: 300;
+        padding-bottom: 20px;
+    }
+
+    @media screen and (max-width:760px){
+        .more_disney .dt h2{
+            font-size: 25px;
+        }
+    }
+    @media screen and (max-width:511px){
+        .more_disney .dt h2{
+            font-size: 25px;
+        }
+    }
+
+    .more_disney .disney{
+        width: 100%;
+        height: inherit;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .disney .disney1{
+        width: 48%;
+        height: inherit;
+    }
+
+    .disney .disney1 img{
+        width: 100%;
+        height: inherit;
+    }
+
+    @media screen and (max-width:760px){
+        .disney .disney1{
+           width: 48%;
+          
+        }
+       
+    }
+    
+    @media screen and (max-width:511px){
+        .disney .disney1{
+         width: 90%;
+          
+        }
+    }
+
+    
+
+    .disney .disney2{
+        width: 48%;
+        height: inherit;
+    }
+
+    .disney .disney2 img{
+        width: 100%;
+        height: inherit;
+    }
+
+    @media screen and (max-width:760px){
+        .disney .disney2{
+           width: 48%;
+          
+        }
+       
+    }
+    
+    @media screen and (max-width:511px){
+        .disney .disney2{
+         width: 90%;
+          
+        }
+    }
+
+    .disney .disney1 p{
+        text-decoration: none;
+         font-size: 25px;
+         padding-top: 25px;
+         padding-bottom: 10px;
+         padding-left: 20px;
+         color: black;
+         font-weight: 100;
+    }
+
+    
+
+ 
+
+    .disney .disney1 span{
+        text-decoration: none;
+         font-size: 21px;
+         padding-top: 25px;
+         padding-bottom: 10px;
+         padding-left: 20px;
+         color: black;
+         font-weight: 100;
+    }
+
+    .disney .disney1 h4{
+        text-decoration: none;
+         font-size: 22px;
+         padding-top: 25px;
+         padding-left: 20px;
+         padding-bottom: 40px;
+         color: black;
+         font-weight: 100;
+    }
+
+    @media screen and (max-width:760px){
+        .disney .disney1 p{
+            font-size: 20px;
+          
+        }
+       
+    }
+    
+    @media screen and (max-width : 511px){
+        .disney .disney1 p{
+            font-size: 20px;
+          
+        }
+    }
+
+    @media screen and (max-width : 760px){
+        .disney .disney1 span{
+            font-size: 20px;
+          
+        }
+       
+    }
+    
+    @media screen and (max-width : 511px){
+        .disney .disney1 span{
+            font-size: 20px;
+          
+        }
+    }
+    @media screen and (max-width : 760px){
+        .disney .disney1 h4{
+            font-size: 20px;
+          
+        }
+       
+    }
+    
+    @media screen and (max-width : 511px){
+        .disney .disney1 h4{
+            font-size: 15px;
+            font-weight: 900;
+          
+        }
+    }
+  
+
+    .disney .disney2 p{
+        text-decoration: none;
+         font-size: 25px;
+         padding-top: 25px;
+         padding-left: 25px;
+         padding-bottom: 10px;
+         color: black;
+         font-weight: 100;
+    }
+
+    .disney .disney2 span{
+        text-decoration: none;
+         font-size: 22px;
+         padding-top: 25px;
+         padding-left: 25px;
+         padding-bottom: 10px;
+         color: black;
+         font-weight: 100;
+    }
+
+    .disney .disney2 h4{
+        text-decoration: none;
+         font-size: 21px;
+         padding-top: 45px;
+         padding-left: 25px;
+         padding-bottom: 40px;
+         color: black;
+         font-weight: 100;
+    }
+    @media screen and (max-width : 760px){
+        .disney .disney2 p{
+            font-size: 25px;
+          
+        }
+       
+    }
+    
+    @media screen and (max-width : 511px){
+        .disney .disney2 p{
+            font-size: 25px;
+          
+        }
+    }
+
+    @media screen and (max-width : 760px){
+        .disney .disney2 span{
+            font-size: 20px;
+          
+          
+        }
+       
+    }
+    
+    @media screen and (max-width : 511px){
+        .disney .disney2 span{
+            font-size: 20px;
+            text-align: center;
+          
+        }
+    }
+    @media screen and (max-width : 760px){
+        .disney .disney2 h4{
+            font-size: 20px;
+          
+        }
+       
+    }
+    
+    @media screen and (max-width : 511px){
+        .disney .disney2 h4{
+            font-size: 18px;
+          
+        }
+    }
+  
+
+    /* More From Disney css end */
+
+    /*footer started  */
+    .main1{
+        width: 100%;
+        height: inherit;
+       display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 30px;
+    
+    }
+    
+    .main1 .logo1{
+        width: 10%;
+        height: inherit;
+    padding-left: 20px;
+    }
+    .main1 .logo1 img{
+        width: 100%;
+    }
+    .main1 .menu1{
+        width: 40%;
+        height: inherit;
+        padding-left: 20px;
+    }
+    .main1 .menu1 a{
+        width: 40%;
+       padding-right: 20px;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    @media screen and (max-width:760px) {
+        .main1 .logo1{
+            width: 48%;
+            height: inherit;
+            margin: 10px 0;
+            padding: 10px;
+        
+    }}
+    
+    @media screen and (max-width:511px) {
+        .main1 .logo1{
+            width: 90%;
+            margin: 10px 0;
+            padding: 10px;
+        }
+    }
+    
+    @media screen and (max-width: 760px) {
+        .main1 .menu1{
+            width: 48%;
+            margin: 10px 0;
+            padding: 10px;
+        }
+    }
+    @media screen and (max-width: 511px) {
+        .main1 .menu1{
+            width: 90%;
+            margin: 10px 0;
+            padding: 10px;
+        }
+    }
+    .main1 .socialmedia{
+        width: 40%;
+        color: black
+    }
+    
+   .main2{
+    width: 100%;
+        height: inherit;
+       display: flex;
+    justify-content: center;
+   }
+    .main2 .logo2{
+        width: 10%;
+        height: inherit;
+    padding-left: 20px;
+    }
+    .main2 .logo2 img{
+        width: 70%;
+    }
+
+    @media screen and (max-width:760px) {
+       .main2 .logo2{
+        width: 30%;
+        align-items: center;
+       }
+}
+
+@media screen and (max-width:511px) {
+    .main2 .logo2{
+     width: 30%;
+     align-items: center;
+     padding-top: 20px;
+    }
+}
+
+.footer_menu{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.footer_menu .ft{
+    width: 10%;
+    padding: 15px;
+}
+
+.footer_menu .ft a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+   font-size: 20px;
+}
+
+@media screen and (max-width : 760px) {
+    .footer_menu .ft a{
+        width: 48%;
+        font-size: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width : 511px) {
+    .footer_menu .ft a{
+        width: 100%;
+        font-size: 8px;
+        padding: 10px;
+        
+    }
+
+}
+

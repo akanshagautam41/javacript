@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation bar | js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+   header{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: aqua;
+    text-align: center;
+   }
+   nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   }
+   a{
+    text-decoration: none;
+    color: black;
+   }
+   span{
+    display: none;
+   }
+   @media screen and (max-width:780px){
+    span{
+        display: block;
+         display: flex;
+        align-self: flex-start;
+        padding-bottom: 20px;
+
+    }
+    nav{
+        display: none;
+     
+    }
+    a{
+        display: flex;
+        flex-direction: row;
+        padding: 5px 0px;
+        color:blue;
+    }
+    
+   }
+
+   .hide{
+    display: block;
+   }
+</style>
+</head>
+<body>
+    <header>
+<span id="bar" onclick="nav()"><i class="fa-solid fa-bars"></i> </span>
+<nav id="menu">
+    <a href="">Home</a>
+    <a href="">Contact</a>
+    <a href="">Blog</a>
+    <a href="">LOGIN</a>
+    <a href="">HELLO</a>
+</nav>
+    </header>
+
+    <script>
+
+        var bar = document.getElementById("bar");
+        var menu = document.getElementById("menu");
+
+        function nav(){
+            menu.classList.toggle("hide");
+        }
+    </script>
+</body>
+</html>

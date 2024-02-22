@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digi clock</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg,#3a00f7,#1b0662);
+    color: aliceblue;
+}
+
+.clock-container {
+    
+    width: 800px;
+    height: 150px;
+    text-align: center;
+    border-radius: 20px;
+    background: linear-gradient(#34012d,#f900d8);
+    
+}
+
+.digital-clock {
+    font-size: 100px;
+    font-family: 'Arial', sans-serif;
+    margin: 20px 0px;
+}
+    </style>
+</head>
+<body>
+    
+    <div class="clock-container">
+        <div id="time" class="digital-clock"></div>
+    </div>
+       
+    <script>
+
+function updateTime() {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    // Add leading zero if the value is less than 10
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+    var timeString = hours + ":" + minutes + ":" + seconds;
+    document.getElementById("time").innerHTML = timeString;
+}
+
+// Update time every second
+setInterval(updateTime, 1000);
+
+// Initial call to display the time immediately
+updateTime();
+    </script>
+</body>
+</html>

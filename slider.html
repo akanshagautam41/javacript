@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider / js</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #main{
+            width: 100%;
+            height: 80vh;
+            position: relative;
+        }
+        img{
+            height: inherit;
+            width: 100%;
+        }
+        
+        #simag{
+            transition: all 12s linear;
+
+        }
+
+        #one,#two,#three{
+            position: absolute;
+            width: 50px;
+            height: 5px;
+            background-color: rgb(255, 0, 0);
+            margin-bottom: 15px;
+            cursor: pointer;
+            bottom: 5px;
+        }
+        #one{
+            left: 45%;
+            margin-left: -30px;
+
+        }
+        #two{
+            left: 50%;
+            margin-left: -30px;
+
+        }
+        #three{
+            left: 55%;
+            margin-left: -30px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+<img id="simg" src="https://img.freepik.com/premium-photo/long-shot-man-exploring-nature_23-2149884252.jpg?w=740" alt="">
+
+<div id="one" onclick="one()"></div>
+<div id="two" onclick="two()"></div>
+<div id="three" onclick="three()"></div>
+</div>
+
+<script>
+
+function one(){
+document.getElementById("simg").src="https://as1.ftcdn.net/v2/jpg/06/25/63/10/1000_F_625631068_2rhgb2geC7DZl0HcRlJKn8cvY20b8mIn.jpg"
+}
+
+function two(){
+    document.getElementById("simg").src="https://as2.ftcdn.net/v2/jpg/06/21/65/57/1000_F_621655744_R2eaVYvFUkzu5FxGuSMQPLy2LyXq2NhP.jpg"
+}
+
+function three(){
+    document.getElementById("simg").src="https://as2.ftcdn.net/v2/jpg/06/76/09/83/1000_F_676098329_Y5p09q5jPc9Fsy2VNFcJRfMmoBBkF2sI.jpg"
+}
+</script>
+</body>
+</html>

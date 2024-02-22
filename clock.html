@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main{
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(45deg,#0703ff,#011760);
+            color: wheat;
+            position: relative;
+        }
+.box{
+    width: 800px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.clock{
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(40px);
+}
+.box::before{
+    content: "";
+    width: 180px;
+    height: 180px;
+    background-color: #f41b75;
+    border-radius: 5px;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    z-index: -1;
+}
+.box::after{
+    content: "";
+    width: 180px;
+    height: 180px;
+    background-color: #3cf41b;
+    border-radius: 50%;
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    z-index: -1;
+}
+
+.clock span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.clock span::after{
+    font-size: 16px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#hrs::after{
+    content: "HOUR";
+}
+#min::after{
+    content: "MIN";
+}
+#sec::after{
+    content: "SEC";
+}
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="box">
+    <div class="clock" >
+        <span id="hrs">00</span>
+        <span>:</span>
+        <span id="min">00</span>
+        <span>:</span>
+        <span id="sec">00</span>
+    </div>
+</div>
+</div>
+<script>
+
+var hour = document.getElementById("hrs");
+var minute = document.getElementById("min");
+var second = document.getElementById("sec");
+
+setInterval(()=>{
+    var currentTime = new Date();
+
+hour.innerHTML = (currentTime.getHours()<10?"0":"") + currentTime.getHours() ;
+minute.innerHTML = (currentTime.getMinutes()<10?"0":"") + currentTime.getMinutes() ;
+second.innerHTML = (currentTime.getSeconds()<10?"0":"") + currentTime.getSeconds() ;
+},1000)
+
+
+
+
+
+</script>
+</body>
+</html>

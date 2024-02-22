@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.parallax{
+    width: 100%;
+    height: 100vh;
+    background: url(background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+}
+.parallax img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.sec{
+    background: #020912;
+    color: #020912;
+}
+    </style>
+</head>
+<body>
+  <div class="parallax">
+    <img src="gate-left.png" id="gat-lf" alt="">
+    <img src="gate-right.png" id="gat-rt" alt="">
+    <img src="grass.png" id="grass" alt="">
+    <img src="tree-left.png" id="tree-lf" alt="">
+    <img src="tree-right.png" id="tree-rt" alt="">
+  </div>  
+  <div class="sec">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iste accusantium officiis nulla voluptatem nisi delectus et, dolorem accusamus velit voluptatibus tenetur nemo laudantium sint deserunt ullam quidem ipsum placeat?
+    Quibusdam unde iste fugit qui eveniet, placeat atque accusamus perspiciatis dicta neque adipisci voluptates distinctio deleniti alias? Voluptas minima deserunt voluptate qui laboriosam, quasi consequuntur! Dolorum, reprehenderit enim! Culpa, voluptatibus.
+    In architecto praesentium, ullam rem quas tempore mollitia sit. Eius doloribus vitae consectetur voluptas molestias illo tenetur illum aut dolor, velit, aperiam quia quas ipsum possimus numquam ullam! Voluptas, accusantium.
+    Iusto nostrum nemo enim numquam adipisci deserunt quod fugiat vitae iure, expedita possimus dicta. In dolorum quae ducimus reprehenderit nesciunt reiciendis illum! Quod voluptatum et accusantium atque beatae maiores vel!
+    Reiciendis nihil aut expedita incidunt, aspernatur non ex assumenda vitae quae neque similique nesciunt consectetur at id aperiam, obcaecati culpa iusto? Repellat ex quaerat voluptate impedit ducimus, delectus magnam vel.
+    Officia, natus! Ipsa culpa voluptatum impedit fugit perferendis. Autem minus nobis beatae est asperiores, neque rerum, voluptatem numquam suscipit a molestiae recusandae odio quidem? Earum maxime maiores soluta omnis est?
+    Nesciunt animi, sint rem quisquam tempore dicta quae at necessitatibus nisi ipsum ipsa aperiam voluptatibus fugit suscipit. Suscipit quae, totam porro odio architecto error quam esse quasi, incidunt, ea sit!
+    Rerum aspernatur natus commodi ipsa harum ipsum, architecto est, nisi perspiciatis nostrum blanditiis ea, nemo velit eos excepturi. Alias, hic. Laborum cumque totam neque dolorum eius inventore beatae ratione qui?
+    Enim in perspiciatis eveniet ipsa maxime sint ipsam sit voluptatum, eum, consequatur quo cum quisquam sed consequuntur nihil veritatis velit doloremque cupiditate consectetur odio. Quisquam iure perspiciatis quidem quod ea?
+    Officia ea id nihil harum maxime vel minus quod quos voluptatum dolorem, natus fugiat molestias saepe fuga pariatur consequuntur laborum accusantium dignissimos alias nobis. Itaque enim nam expedita libero. Obcaecati.
+    Consequatur asperiores officia aut saepe voluptatem similique quae eius sapiente doloremque exercitationem praesentium ut harum, voluptate, eaque unde vero! Aut cum voluptate, amet dignissimos voluptates laboriosam hic sapiente dolorem accusantium!
+    Recusandae, quia harum ut ratione deserunt facere, vitae obcaecati dolore tempore laudantium eaque provident ea tempora aliquam a? Odit, molestias doloremque cupiditate totam fugiat vitae possimus magni tempora necessitatibus eum?
+    In minima ducimus neque qui nemo nostrum sunt quasi perspiciatis dolore rerum doloremque optio, corporis reiciendis nihil temporibus nisi voluptas, excepturi numquam? Aperiam rem eaque, officiis neque totam debitis cupiditate.
+    In consequatur accusamus cum sequi dolorum esse numquam itaque ab vero veniam natus fuga 
+  </div>
+  <script>
+    var gate_left = document.getElementById("gat-lf")
+    var gate_right = document.getElementById("gat-rt")
+    var grass = document.getElementById("grass")
+    var tree_left = document.getElementById("tree-lf")
+    var tree_right = document.getElementById("tree-rt")
+
+    window.addEventListener("scroll",function(){
+
+        let value = window.scrollY;
+        gate_left.style.left = value * -2 + "px";
+        gate_right.style.left = value * +2 + "px";
+        grass.style.top = value * 2 + "px";
+        tree_left.style.left = value * -2 + "px";
+        tree_right.style.left = value * +2 + "px";
+    })
+  </script>
+</body>
+</html>

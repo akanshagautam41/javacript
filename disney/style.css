@@ -1,0 +1,240 @@
+.body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Logo And Menu  Css start */
+
+.main{
+    width: 100%;
+    height: inherit;
+   display: flex;
+align-items: center;
+
+}
+
+.main .logo{
+    width: 10%;
+    height: inherit;
+padding-left: 20px;
+}
+.main .logo img{
+    width: 70%;
+}
+
+.main .menu a{
+    width: 90%;
+   padding-right: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+/* Logo And Menu  Css end */
+
+/* banner  Css start */
+
+.banner{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+}
+
+.banner img{
+    width: 100%;
+    height: inherit;
+}
+/* banner  Css end */
+/* product  Css start*/
+.box{
+    width: 100%;
+    height: inherit;
+    flex-wrap: wrap;
+    display: flex;
+  justify-content: space-between;
+ padding-top: 30px;
+}
+
+.box .bx1{
+    width: 24%;
+    height: 100%;
+}
+
+.box  .bx1 img{
+    width: 100%;
+   
+
+}
+/* product  Css end*/
+
+/* feature ads  Css start*/
+
+.ads{
+width: 100%;
+height: 200vh;
+background-color: cadetblue;      /* ads is main box of all ads content  */
+
+}
+
+.ads p{
+    font-size: 40px;
+    padding-left: 80px;
+    padding-top: 40px;
+}
+
+.ad{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.ad .ad1{
+width: 48%;
+   
+}
+
+.ad .ad1 img{
+    width: 100%;
+}
+
+
+
+.ad1 p{
+    font-size: 25px;
+    padding: 0 0 0 25px;
+    
+}
+.ad .ad2{
+    width: 48%;
+}
+
+.ad2 video{
+    width: 100%;
+    
+}
+.ad2 p{
+    font-size: 25px;
+    padding: 0 0 0 25px;
+}
+.ad2 p a{
+color: black;
+text-decoration: none;
+font-size: 25px;
+}
+
+.ad2 a{
+    color:black ;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 100;
+    background-color: aqua;
+
+}
+/* feature ads  Css end*/
+/* explore disney css start */
+.product{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Product .pr{
+    width: 30%;
+}
+.product img{
+    width: 100%;
+   height: 100%; 
+    
+}
+.text{
+    padding: 10%;
+
+}
+
+.product .pr .text a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.product .pr .text h2 a{
+    font-size: 16px;
+    padding: 0;
+}
+/* explore disney css end */
+.more{
+font-size: 20px;
+}
+
+@media screen and (max-width : 760px){
+    .box .bx1{
+        width: 48%;
+     margin: 25px 0;
+     padding: 10px 0;
+    }
+   
+}
+
+@media screen and (max-width : 480px){
+    .box .bx1{
+        width: 90%;
+     margin: 25px 0;
+     padding: 10px 0;
+    }
+}
+
+
+
+
+@media screen and (max-width : 760px){
+    .ads .ad .ad1 a img{
+        width: 48%;
+     margin: 25px 0;
+     padding: 10px 0;
+    }
+}
+@media screen and (max-width : 760px){
+    .ads .ad .ad2 a video{
+        width: 48%;
+     margin: 25px 0;
+     padding: 10px 0;
+    }
+}
+
+@media screen and (max-width : 480px){
+    .ads .ad .ad1 a img{
+        width: 90%;
+     height: 100%;
+    }
+}
+@media screen and (max-width : 480px){
+    .ads .ad .ad2 a video{
+        width: 90%;
+     height: 100%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .ads p{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .ads p{
+        width: 100%;
+    }
+    
+}
+
+
+
+
+
+
+
