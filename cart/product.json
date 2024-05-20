@@ -1,0 +1,27 @@
+[
+    {
+        "id" : 1,
+        "name" : "black shirt",
+        "price" : 200,
+        "image" : "https://freepngimg.com/thumb/dress_shirt/4-black-dress-shirt-png-image.png"
+    },
+    {
+        "id" : 2,
+        "name" : "white shirt",
+        "price" : 200,
+        "image" : "https://freepngimg.com/thumb/dress_shirt/54-white-dress-shirt-png-image.png"
+    },
+    {
+        "id" : 3,
+        "name" : "black shirt",
+        "price" : 200,
+        "image" : "https://freepngimg.com/thumb/dress_shirt/4-black-dress-shirt-png-image.png"
+    },
+    {
+        "id" : 4,
+        "name" : "white shirt",
+        "price" : 200,
+        "image" : "https://freepngimg.com/thumb/dress_shirt/54-white-dress-shirt-png-image.png"
+    }
+    
+]

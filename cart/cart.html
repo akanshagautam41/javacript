@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .listproduct{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .listproduct .item{
+            width: 24%;
+            background: red;
+            text-align: center;
+        }
+
+        .listproduct .item img{
+            width: 100%;
+            height: inherit;
+        }
+
+        .listproduct .item p{
+            margin: 10px 0px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="listproduct">
+        <div class="item">
+            <img src="https://freepngimg.com/thumb/dress_shirt/4-black-dress-shirt-png-image.png" alt="">
+            <h2>product name </h2>
+            <p class="price">price</p>
+            <button class="addcart">add to cart</button>
+        </div>
+    </div>
+
+    <script>
+
+        var listproduct = document.querySelector(".listproduct")
+        var prdlist = []
+
+        var  adddata = () =>{
+            listproduct.innerHTML = ``;
+            if(prdlist.length > 0){
+                prdlist.forEach(function(product){
+                    var newproduct  = document.createElement("div")
+                    newproduct.classList.add('item')
+                    newproduct.innerHTML = `
+                    
+                    <img src="https://freepngimg.com/thumb/dress_shirt/4-black-dress-shirt-png-image.png" alt="">
+            <h2>product name </h2>
+            <p class="price">price</p>
+            <button class="addcart">add to cart</button>
+                    `
+                    listproduct.appendChild(newproduct)
+                })
+            }
+        }
+
+        var fetdata = ()=>{
+            fetch('product.json').then(function(response){
+                return response.json()
+            }).then(function(result){
+                prdlist = result
+                adddata()
+            }).catch(function(){
+                console.log("error")
+            })
+        }
+
+        fetdata()
+
+    </script>
+    
+</body>
+</html>

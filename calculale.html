@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculate Total</title>
+<style>
+  /* Basic styling for the input fields and button */
+  input, button {
+    padding: 5px;
+    margin: 5px;
+  }
+</style>
+</head>
+<body>
+  <h1>Calculate Total</h1>
+  <div>
+    <label for="price1">Price 1:</label>
+    <input type="number" id="price1">
+    <label for="quantity1">Quantity 1:</label>
+    <input type="number" id="quantity1">
+  </div>
+  <div>
+    <label for="price2">Price 2:</label>
+    <input type="number" id="price2">
+    <label for="quantity2">Quantity 2:</label>
+    <input type="number" id="quantity2">
+  </div>
+  <div>
+    <button onclick="calculateTotal()">Calculate Total</button>
+  </div>
+  <div id="results">
+    <p>Subtotal: <span id="subtotal"></span></p>
+    <p>Grand Total: <span id="grandTotal"></span></p>
+  </div>
+
+  <script >
+    function calculateTotal() {
+  // Get input values
+  const price1 = document.getElementById('price1').valueAsNumber || 0;
+  const quantity1 = document.getElementById('quantity1').valueAsNumber || 0;
+  const price2 = document.getElementById('price2').valueAsNumber || 0;
+  const quantity2 = document.getElementById('quantity2').valueAsNumber || 0;
+
+  // Calculate subtotal for each item
+  const subtotal1 = price1 * quantity1;
+  const subtotal2 = price2 * quantity2;
+
+  // Calculate grand total
+  const grandTotal = subtotal1 + subtotal2;
+
+  // Display results
+  document.getElementById('subtotal').textContent = grandTotal.toFixed(2);
+  document.getElementById('grandTotal').textContent = grandTotal.toFixed(2);
+}
+
+  </script>
+</body>
+</html>

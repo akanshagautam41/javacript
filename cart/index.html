@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: capitalize;
+        }
+
+        .container
+        {
+            width: 90%;
+            margin: 0 auto;
+        }
+        header{
+            padding: 3% 0%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header #cart{
+            font-size: 22px;
+        }
+        header span{
+            background: skyblue;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        /* header end  */
+
+        .listproduct{
+            padding: 5% 0%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .listproduct .item{
+            width: 24%;
+            background: lightgray;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .listproduct .item img{
+            width: 100%;
+            height: inherit;
+        }
+        .listproduct .item  p{
+            margin: 15px 0px;
+            font-size: 18px;
+        }
+        .listproduct .item .addcart{
+            background: black;
+            color: white;
+            font-size: 18px;
+            padding: 10px 30px;
+            border: none;
+        }
+
+        /* .listproduct end  */
+
+        .cart-box{
+            width: 25%;
+            background: black;
+            color: white;
+            position: fixed;
+            right: -25%;
+            top: 0;
+            bottom: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 1s linear;
+        }
+        .cart-box .btn{
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 20px;
+        }
+        .cart-box h2{
+            font-size: 3vw;
+            padding: 10px 0px;
+        }
+        .cart-box .btn button{
+            padding: 10px;
+            width: 45%;
+            border-radius: 0;
+            border: none;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+    <header>
+        <h2>logo</h2>
+        <div class="icon">
+            <i class="fa-solid fa-cart-shopping" id="cart"></i>
+            <span>0</span>
+        </div>
+    </header>
+
+
+    <!-- listproduct start  -->
+    <div class="listproduct">
+        <div class="item">
+            <img src="https://freepngimg.com/thumb/dress_shirt/4-black-dress-shirt-png-image.png" alt="">
+            <h2>product name</h2>
+            <p class="price">$200</p>
+            <button class="addcart">add to cart</button>
+        </div>
+    </div>
+    <!-- listproduct end  -->
+
+    <div class="cart-box">
+        <h2>add to cart </h2>
+        <div class="item-list">
+
+        </div>
+        <div class="btn">
+            <button class="close">close</button>
+            <button class="checkout">checkout</button>
+        </div>
+    </div>
+    
+</div>
+
+<script>
+
+    var cart = document.querySelector("#cart")
+    var cartbox = document.querySelector(".cart-box")
+    var closebtn = document.querySelector(".close")
+    var listproduct = document.querySelector(".listproduct")
+    var prdlist  = [];
+
+
+    cart.addEventListener('click',function(){
+        cartbox.style.right = "0%"
+    })
+
+    closebtn.addEventListener('click',function(){
+        cartbox.style.right = "-25%"
+    })
+
+    var addData = () =>{
+
+        listproduct.innerHTML = ``;
+        if(prdlist.length > 0){
+            prdlist.forEach(function(product){
+                var newproduct = document.createElement("div");
+                newproduct.classList.add("item")
+                newproduct.innerHTML = ` 
+                <img src="${product.image}" alt="">
+            <h2>${product.name}</h2>
+            <p class="price">$ ${product.price}</p>
+            <button class="addcart">add to cart</button>
+                `
+                listproduct.appendChild(newproduct)
+                
+            })
+        }
+
+    }
+    var ftdata = () =>{
+        fetch('product.json').then(function(response){
+            return response.json()
+        }).then(function(result){
+            prdlist = result
+            addData()
+        }).catch(function(){
+            console.log("error")
+        })
+    }
+    ftdata()
+
+</script>
+
+</body>
+</html>
